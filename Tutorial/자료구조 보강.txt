@@ -1,0 +1,61 @@
+유닉스 우분투 OS 도스창 명령어 
+
+mkdir 폴더 만들기
+ls 디렉토리 확인
+cd change directory 디렉토리 바꾸기
+pwd 내 위치 확인 하기
+
+탭키 누르면 자동완성 해줌
+
+vi  (리눅스 내장 에디터 프로그램)
+
+
+vi xxx.c 파일 생성 
+
+i를 눌러야 입력가능
+다 입력후 esc 누르고
+: 입력 다음에 w눌러서 저장
+: 입력 다음에는 q를 눌러서 다시 도스창 나가기
+: 입력 다음에 wq를 눌러서 동시 저장후 종료
+
+rm -rf 파일 지우기
+
+컴파일 하기!
+gcc -o(output) foo(input) foo.c(컴파일 결과파일을 여기에 저장)
+
+.(현재폴더) /(아래에) foo 파일 : 컴파일된 c소스 실행코드
+
+
+vi Makerfile : 파일 만듬
+
+all: 
+	gcc -o foo foo.c
+	./foo
+
+help : @echo make all 
+
+make all 하면 한번에 실행 가능
+
+커서 이동후 yy하면 한줄 복사가능
+원하는 위치에 가서 p하면 붙여넣기
+
+
+
+sp(창을 스플릿으로 바로 구분가능)
+
+sp increment.h (헤더파일 스플릿)
+sp increment.c (c파일로 스플릿)
+
+스플릿후에 ctrl ww 하면 스플릿 창마다 커서 이동 가능
+
+3dd는 잘라내기
+p하면은 다시 복사됨
+
+
+mv Makerfile Makefile (이름바꾸기)
+free (용량)
+top (cpu)
+
+Cp : copy
+Cp -rf a/  : b에 a가 있으면 물어봄
+Cp -r a / b 복사 ㅎ
