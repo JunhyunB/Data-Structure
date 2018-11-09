@@ -7,6 +7,6 @@ main.c
 
 To use:  
 
-'''{.bash}
+```{.bash}
 $ make all
-'''
+```
