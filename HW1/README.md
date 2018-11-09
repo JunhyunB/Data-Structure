@@ -1,6 +1,6 @@
 # HW1
 
-codes for Homework 1  
+## codes for Homework 1  
 
 
 ![HW1_1](1.png)
