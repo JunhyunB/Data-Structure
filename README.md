@@ -1,9 +1,9 @@
-Data Structure code
+# Data Structure code
 
-1. Stack
-2. Queue
-3. Linked List
-4. Tree
+## 1. Stack
+## 2. Queue
+## 3. Linked List
+## 4. Tree
 
 HW1 folder has description pdf file for assignment #1
 
