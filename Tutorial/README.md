@@ -5,7 +5,8 @@ ADT_stack.c
 ADT_stack.h
 main.c
 
-To use:
+To use:  
+
 '''
 $ make all
 '''
