@@ -1,6 +1,7 @@
 # HW2
 
-Implementation for BST functions below.. 
+### Implementation for BST functions below..   
+
 ```C
 T_NODE* find_smallest_node(T_NODE* node);
 T_NODE* find_largest_node(T_NODE* node);

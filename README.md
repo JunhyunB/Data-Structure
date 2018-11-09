@@ -1,5 +1,10 @@
 # Data Structure code
 
+### Tutorial has scratch code of C language and data structures  
+
+### HW1 has description pdf file for assignment #1  
+### HW2 has codes for assignment #2  
+
 ## 1. Stack
 
 1. type  
@@ -87,7 +92,3 @@ bool BST_delete(BST_TREE* tree, int data);
 T_NODE* add_bst(T_NODE* root, int data);
 T_NODE* delete_bst(T_NODE* root, int data, bool* success);
 ```
-
-HW1 folder has description pdf file for assignment #1
-
-Tutorial folder has scratch code of C language and data structures
