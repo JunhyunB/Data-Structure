@@ -1,22 +1,24 @@
 #include "BST_tree.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 int main() {
-    BST_TREE* tree;
-    tree = create_bst();
-    if (tree) {
-        printf("Create tree success!\n");
-    }
+    BST_TREE* tree = create_bst();
+    BST_TREE* tree_clone;
 
-    if (BST_insert(tree, 17)) {
-        printf("Insert success!\n");
-        printf("Tree count: %d\n", tree->count);
-    }
-    if(!BST_delete(tree, 17)){
-        printf("failed on deleting 17 \n");
-    }
-    else {
-        printf("success on deleting 17\n");
-    }
+    if(tree)
+        printf("BST created!\n");
+
+    int a[10] = {3, 7, 2, 5, 4, 10, 6, 19, 1, 8};
+
+    for(int i=0;i<(sizeof(a)/sizeof(int));i++) {
+		BST_insert(tree, a[i]);
+	}
+
+    tree_clone = copy_tree(tree);
+
+    printf("Copy completed!\n");
+
     return 0;
 }
