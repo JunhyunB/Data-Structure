@@ -3,7 +3,7 @@
 ### **Tutorial** has scratch code of C language and data structures  
 
 ### **HW1** has description pdf file for assignment #1  (About **Stack**)
-### **HW2** has codes for assignment #2  (About **Binary Search Tree**)  
+### **HW2**(https://github.com/JunhyunB/Data-Structure/blob/master/HW2/README.md) has codes for assignment #2  (About **Binary Search Tree**)  
 
 # Table of Contents  
 
