@@ -2,6 +2,8 @@
 
 ## Implementation of Homework 1  
 
+This is the solution for Homework #1. 
+
 To use:  
 
 ```{.bash}
