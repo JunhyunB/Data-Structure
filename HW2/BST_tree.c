@@ -1,4 +1,5 @@
 #include "BST_tree.h"
+#include "ADT_queue.h"
 
 BST_TREE* create_bst() {
     BST_TREE* tree = (BST_TREE*)malloc(sizeof(BST_TREE));
@@ -18,7 +19,7 @@ bool BST_insert(BST_TREE* tree, int data) {
     else {
         tree->root = newRoot;
         (tree->count)++;
-        printf("%d is inserted!\n", data);
+        //printf("%d is inserted!\n", data);
         return true;
     }
 }
@@ -91,8 +92,9 @@ T_NODE* delete_bst(T_NODE* root, int data, bool* success) {
                 search = root->left;
                 while(search->right != NULL)
                     search = search->right;
-                root->data = search->data; //promote to new boss position
+                root->data = search->data; //Promotion!
                 root->left = delete_bst(root->left, search->data, success);
+                // promote 되었으니 원래 위치에서 삭제해야함!
             }
         }
     }
@@ -117,9 +119,11 @@ T_NODE* search_bst(T_NODE* root, int key) {
     if(root == NULL)
         return NULL;
     if(key < (root->data))
-        return search_bst(root->left, key);
+        root->left = search_bst(root->left, key);
+        //return search_bst(root->left, key);
     else if(key > (root->data))
-        return search_bst(root->right, key);
+        root->right = search_bst(root->right, key);
+        //return search_bst(root->right, key);
     else
         return root;
 }
@@ -148,14 +152,23 @@ void traverse_inorder(T_NODE* root) {
 }
 
 BST_TREE* copy_tree(BST_TREE* tree) {
-    BST_TREE* tree_clone = create_bst();
-    if(tree->root == NULL)
-        return NULL;
-    else {
-        bool success = BST_insert(tree_clone, tree->root->data); 
-        tree_clone->root->left = copy_tree(tree)->root->left;
-        tree_clone->root->right = copy_tree(tree)->root->right;
-    }
+    return NULL;
+    /*
+    T_NODE* temp = tree->root;
 
-    return tree_clone;
+    if(temp != NULL) {
+        enqueue(queue, &(temp->data));
+        tree->root = temp->left;
+        copy_tree(tree, queue);
+        tree->root = temp->right;
+        copy_tree(tree, queue);
+   }
+   if(queue->count == tree->count) {
+        BST_TREE* tree_clone = create_bst();
+        printf("copying...\n");
+        bool check = BST_insert(tree_clone, *(int*)dequeue(queue));
+        return tree_clone;
+   }
+   return NULL;
+   */
 }
