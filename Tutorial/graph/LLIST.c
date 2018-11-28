@@ -101,6 +101,7 @@ bool del_node_at(LLIST* list, unsigned int index){
     return false;
 }
 
+/*
 LLIST* reverse_list(LLIST* list) {
     // 예외처리
     if(list->count == 0)
@@ -124,3 +125,4 @@ LLIST* reverse_list(LLIST* list) {
 
     return list;
 }
+*/

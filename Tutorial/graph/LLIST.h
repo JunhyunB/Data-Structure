@@ -17,4 +17,4 @@ typedef struct {
 LLIST* create_list();
 bool add_node_at(LLIST* list, unsigned int index, void* data);
 bool del_node_at(LLIST* list, unsigned int index);
-LLIST* reverse_list(LLIST* list);
+//LLIST* reverse_list(LLIST* list);
